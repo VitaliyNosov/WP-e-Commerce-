@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  // slider
+
     $('.slider_header').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -47,5 +49,16 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         ]
       });
-	
+
+      // hover cart
+
+      $('.cart').hover(function() {
+        console.log('vdfff');
+        $('.cart__hover').show(); 
+      }, 
+      function() {
+        $('.cart__hover').hide();
+      });
+
+
 });

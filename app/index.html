@@ -67,7 +67,11 @@
 					</nav>
 				</div>
 				<div class="header__icon">
-					<img src="images/icon/Search_Ico.png" alt="#">
+					<div class="search__container">
+						<form class="form__search" action="" autocomplete="on">
+							<input id="search" name="search" type="text"><input id="search_submit" value="Rechercher" type="submit">
+						</form>
+					</div>
 					<img src="images/icon/User_Ico.png" alt="#">
 					<img src="images/icon/Add_To_Cart_Ico.png" alt="#">
 				</div>
@@ -214,7 +218,7 @@
 				<!-- cart hover -->
 
 			<div class="cart__hover">
-				<div class="cart__image">
+				<div class="cart__image__hover">
 					<img src="images/product/Product_Img_5.png" alt="#">
 				</div>
 				<div class="cart__name">Reebok Track Jacket</div>
@@ -275,7 +279,14 @@
 					<div class="cart__info__block">
 						<h3>Reebok Track Jacket</h3>
 						<div class="cart__icon">
-							<img src="images/icon/Rate.png" alt="#">
+							<div class="starts__body">			
+								<div class="rating__mini">
+									<span class="active"></span>	
+									<span class="active"></span>    
+									<span class="active"></span>  
+									<span></span>    
+								</div>						
+							</div>
 							<p>$100</p>
 						</div>
 					</div>
@@ -286,8 +297,8 @@
 					<div class="cart__info__block">
 						<h3>Reebok Track Jacket</h3>
 						<div class="cart__icon">
-							<img src="images/icon/Rate.png" alt="#">
-							<p>$100</p>
+							<img src="images/icon/Add_To_Cart_Ico.png" alt="#">
+							<p>add too cart</p>
 						</div>
 					</div>
 				</div>
@@ -297,7 +308,14 @@
 					<div class="cart__info__block">
 						<h3>Reebok Track Jacket</h3>
 						<div class="cart__icon">
-							<img src="images/icon/Rate.png" alt="#">
+							<div class="starts__body">			
+								<div class="rating__mini">
+									<span class="active"></span>	
+									<span class="active"></span>    
+									<span class="active"></span>  
+									<span></span>    
+								</div>							
+							</div>
 							<p>$100</p>
 						</div>
 					</div>
@@ -314,8 +332,10 @@
 				</div>
 				<div class="form">
 					<img src="images/icon/Mail_Ico.png" alt="#">
-					<input type="text" placeholder="type your email here">
-					<a href="#">join us </a>
+					<form action="#">
+						<input class="input__two" type="text" placeholder="type your email here">
+						<a href="#">join us </a>
+					</form>
 				</div>
 			</div>
 		</div>

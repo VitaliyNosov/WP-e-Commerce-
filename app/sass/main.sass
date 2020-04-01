@@ -96,7 +96,6 @@
   width: 500px
   display: flex
   font-family: "Sans pro"
-  margin-right: 100px
   nav 
     display: flex
     ul 
@@ -114,11 +113,70 @@
           color: #FF5912
   
 .header__icon
-  width: 200px
+  width: 370px
   display: flex
   justify-content: flex-end
   img 
     margin-left: 35px
+
+.search__container
+  width: 250px
+  height: 30px
+  // border: 1px solid #ccc
+  position: relative
+  display: flex
+  align-items: center
+
+input::-ms-clear 
+   display: none
+
+.form__search
+  input
+    &[type="text"]
+      height: 25px
+      font-size: 14px
+      // display: inline-block
+      font-family: "Lato"
+      font-weight: 100
+      border: none
+      outline: none
+      color: #555
+      padding-right: 20px
+      width: 0px
+      position: absolute
+      top: 0
+      right: 0
+      background: none
+      z-index: 3
+      transition: width 0.4s cubic-bezier(0, 0.795, 0, 1)
+      cursor: pointer
+
+      &:focus
+        &:hover
+        border-bottom: 1px solid #BBB
+        width: 228px
+        z-index: 1
+        cursor: text
+
+    &[type="submit"]
+      height: 30px
+      width: 30px
+      display: inline-block
+      color: red
+      float: right
+      background: url(../images/icon/Search_Ico.png) center center no-repeat
+      text-indent: -10000px
+      border: none
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+      cursor: pointer
+      opacity: 0.4
+      cursor: pointer
+      transition: opacity .4s ease
+      &:hover
+        opacity: 0.8
 
 // slider block
 
@@ -191,8 +249,6 @@
     margin-left: 10px
   
     
-
-
 // section info
 
 .section__info__praice
@@ -272,10 +328,16 @@
   position: relative
  
 .cart__image
-  width: 100%
+  max-width: 170px
+  max-height: 211px
+  margin: 0 auto
+  overflow: hidden
   margin-top: 30px
   display: flex
   justify-content: center
+  img 
+    width: 100%
+    height: 100%
 
 .cart__name 
   width: 100%
@@ -289,7 +351,8 @@
 
 .cart__prace 
   width: 100%
-  margin-top: 25px
+  margin-top: 15px
+  margin-bottom: 15px
   color: #FE7B27 
   display: flex
   justify-content: center
@@ -302,12 +365,23 @@
 .cart__hover
   width: 240px
   height: 365px
+  padding: 30px
   border: 1px solid #eee
   background-color: #ffffff
   box-shadow: 0px 0px 78px -19px rgba(141,146,150,0.74)
   position: absolute
-  z-index: 10
+  z-index: 100
   display: none
+
+.cart__image__hover
+  width: 70px
+  height: 87px
+  overflow: hidden
+  margin: 0 auto
+  img 
+    width: 100%
+    height: 100%
+
 
 .cart__info 
   width: 100%
@@ -438,6 +512,9 @@
     font-weight: 400
     letter-spacing: 7.2px
 
+.prace__header 
+  text-align: center
+
 .best__prace__info 
   width: 100%
   margin-top: 118px
@@ -477,6 +554,33 @@
   &:hover 
     box-shadow: 0px 0px 53px 0px rgba(0,0,0,0.16)
 
+// start rating
+
+.starts__body
+  width: 100PX
+  height: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.rating__mini
+  display: inline-block
+  font-size: 0
+
+  span
+    padding: 0
+    font-size: 20px
+    line-height: 1
+    color: lightgrey
+
+  > span
+    &:before
+      content: '★'
+
+    &.active
+      color: #FF5912
+
+
 .cart__info__block 
   height: 100%
   display: flex
@@ -488,6 +592,8 @@
     font-weight: 700
     margin-top: 30%
     margin-left: 20px
+  p 
+    margin-left: 10px
 
 .cart__icon
   height: 23px
@@ -524,6 +630,8 @@
     font-size: 14px
     margin-left: 30px
 .form 
+  display: flex
+  align-items: center
   a 
     background-color: #ff5912
     color: #ffffff
@@ -536,7 +644,9 @@
       background-color: #D2490F
 input 
   margin-left: 10px
+  z-index: 100
   border: none
+
 
 // footer block
 
@@ -601,6 +711,7 @@ input
     line-height: 30px
 
 
+// Медия запросы
 
 
 @media (max-width: 1200px) 
